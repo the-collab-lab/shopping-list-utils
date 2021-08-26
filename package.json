@@ -1,6 +1,6 @@
 {
   "name": "@the-collab-lab/shopping-list-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of utility methods used for the shopping list project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

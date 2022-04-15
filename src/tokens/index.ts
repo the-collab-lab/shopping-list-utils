@@ -29,7 +29,7 @@ const getRandomIntInRange = (min: number, max: number) => {
  * Generates a token of three space-separated words.
  * @see: http://stackoverflow.com/a/1527820/11577
  */
-export const getToken = () => {
+export const generateToken = () => {
   let phrase: string[] = new Array(3);
 
   for (let i = 0; i < 3; i += 1) {

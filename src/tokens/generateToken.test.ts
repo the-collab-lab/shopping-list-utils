@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { getToken } from "./index";
+import { generateToken } from "./index";
 
 const nodeCrypto = require("crypto");
 window.crypto = {
@@ -13,12 +13,12 @@ window.crypto = {
   subtle: null,
 };
 
-describe("`getToken()`", () => {
+describe("`generateToken()`", () => {
   it("should return a 3-word token", () => {
-    expect(getToken().split(" ").length).toBe(3);
+    expect(generateToken().split(" ").length).toBe(3);
   });
 
   it("should not repeat words in the token", () => {
-    expect(getToken()).not.toMatch(/\b(\w+)\b.*\b\1\b/);
+    expect(generateToken()).not.toMatch(/\b(\w+)\b.*\b\1\b/);
   });
 });

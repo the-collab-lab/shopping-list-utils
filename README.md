@@ -23,7 +23,7 @@ Current features include:
 Function | Description
 | --- | --- |
 `words` | An array of words available for use when generating a token.
-`generateToken` | Creates a random token string that is 4 words long based on a random calculation.
+`generateToken` | Creates a random token string that is 3 words long based on a random calculation.
 `calculateEsimate` | This is used to calculate when someone will want to purchase another item based on their purchasing habits.
 
 ## Contributing to the Repo

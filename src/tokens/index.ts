@@ -2,6 +2,10 @@ import { words } from "./words";
 
 // the below is heavily based on https://andrew.hedges.name/experiments/diceware/
 
+/**
+ * Gets a random integer *exclusive* of the max.
+ * @see: https://www.rempe.us/diceware/
+ */
 const getRandomIntInRange = (min: number, max: number) => {
   const crypto = window.crypto;
   const rand = new Uint32Array(1);
@@ -21,7 +25,10 @@ const getRandomIntInRange = (min: number, max: number) => {
   return (result % max) + min;
 };
 
-// based on: http://stackoverflow.com/a/1527820/11577
+/**
+ * Generates a token of three space-separated words.
+ * @see: http://stackoverflow.com/a/1527820/11577
+ */
 export const getToken = () => {
   let phrase: string[] = new Array(3);
 

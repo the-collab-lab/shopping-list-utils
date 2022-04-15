@@ -1,4 +1,4 @@
-export const words = [
+[
   "aaa",
   "aaaa",
   "aaron",
@@ -6522,5 +6522,5 @@ export const words = [
   "zorn",
   "zurich",
   "zzz",
-  "zzzz",
-];
+  "zzzz"
+]

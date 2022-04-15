@@ -1,4 +1,4 @@
-import { words } from "./words";
+import words from "./words.json";
 
 // the below is heavily based on https://andrew.hedges.name/experiments/diceware/
 

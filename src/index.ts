@@ -1,3 +1,3 @@
 export { generateToken } from "./tokens";
-export { words } from "./tokens/words";
+export { default as words } from "./tokens/words.json";
 export { calculateEstimate } from "./calculateEstimate";

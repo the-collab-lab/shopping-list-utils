@@ -30,7 +30,11 @@ function getAllFiles(dirPath, arrayOfFiles) {
 
 function minifyFiles(filePaths) {
   filePaths.forEach(async (filePath) => {
-    const result = await minify(fs.readFileSync(filePath, "utf8"));
+    const result = await minify(fs.readFileSync(filePath, "utf8"), {
+      mangle: {
+        module: true,
+      },
+    });
     fs.writeFileSync(filePath, result.code);
   });
 }

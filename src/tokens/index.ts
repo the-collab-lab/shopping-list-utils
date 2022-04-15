@@ -24,10 +24,10 @@ const getRandomInt = (min: number, max: number) => {
 
 // based on: http://stackoverflow.com/a/1527820/11577
 export const getToken = () => {
-  let phrase: string[] = [];
+  let phrase: string[] = new Array(3);
 
   for (let i = 0; i < 3; i += 1) {
-    phrase.push(words[getRandomInt(0, words.length)]);
+    phrase[i] = words[getRandomInt(0, words.length)];
   }
 
   return phrase.join(" ");

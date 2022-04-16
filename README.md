@@ -8,23 +8,23 @@ This is an NPM package used to share common methods between the shopping list ap
 
 To use this package, you can run the following in your project:
 
-```
+``` bash
 npm i @the-collab-lab/shopping-list-utils
 ```
 
 and use it in your projects like so:
 
-```
-import { generateToken, words, calculateEstimate } from '@the-collab-lab/shopping-list-utils
+``` js
+import { calculateEstimate, generateToken, words } from '@the-collab-lab/shopping-list-utils'
 ```
 
 Current features include:
 
-Function | Description
-| --- | --- |
-`words` | An array of words available for use when generating a token.
-`generateToken` | Creates a random token string that is 3 words long based on a random calculation.
-`calculateEsimate` | This is used to calculate when someone will want to purchase another item based on their purchasing habits.
+Export | Type | Description
+| --- | --- | --- |
+`calculateEsimate` | `function` | This is used to calculate when someone will want to purchase another item based on their purchasing habits.
+`generateToken` | `function` | Creates a random token string that is 3 words long based on a random calculation.
+`words` | `Array<string>` | An array of words available for use when generating a token.
 
 ## Contributing to the Repo
 

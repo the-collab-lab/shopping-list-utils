@@ -9,7 +9,8 @@ import words from "./words.json";
 const getRandomIntInRange = (min: number, max: number) => {
   const crypto = window.crypto;
   const rand = new Uint32Array(1);
-  const skip = 0x7fffffff - (0x7fffffff % max);
+  const bitwiseMaxInt = 0x7fffffff;
+  const skip = bitwiseMaxInt - (bitwiseMaxInt % max);
   let result: number;
 
   if (((max - 1) & max) === 0) {
@@ -19,7 +20,7 @@ const getRandomIntInRange = (min: number, max: number) => {
 
   do {
     crypto.getRandomValues(rand);
-    result = rand[0] & 0x7fffffff;
+    result = rand[0] & bitwiseMaxInt;
   } while (result >= skip);
 
   return (result % max) + min;

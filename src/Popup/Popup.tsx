@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
 import "./Popup.css";
@@ -7,9 +8,21 @@ export function Popup({
 }: {
   setShowPopup: Dispatch<SetStateAction<boolean>>;
 }) {
+  const popupRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const popup = popupRef.current;
+    if (popup) {
+      popup.showModal();
+    }
+    return () => {
+      if (popup) {
+        popup.close();
+      }
+    };
+  }, []);
   return (
-    <div id="popup-con">
-      <div id="popup-bg"></div>
+    <dialog id="popup-con" ref={popupRef}>
       <div id="popup">
         <link
           href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
@@ -62,6 +75,6 @@ export function Popup({
           </a>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }

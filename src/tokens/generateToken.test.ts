@@ -1,16 +1,12 @@
-/**
- * @jest-environment jsdom
- */
-
+const nodeCrypto = require("crypto");
 import { generateToken } from "./index";
 
-const nodeCrypto = require("crypto");
-window.crypto = {
+globalThis.crypto = {
   getRandomValues: function (buffer) {
     return nodeCrypto.randomFillSync(buffer);
   },
-  randomUUID: () => "",
-  subtle: null,
+  randomUUID: () => "" as `${string}-${string}-${string}-${string}-${string}`,
+  subtle: nodeCrypto.webcrypto.subtle,
 };
 
 describe("`generateToken()`", () => {

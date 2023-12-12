@@ -2,6 +2,11 @@ html:has(#popup-con[open]) {
 	font-size: 62.5% !important;
 }
 
+#popup-con {
+	border: none;
+	padding: 0;
+}
+
 #popup-con::backdrop {
 	background-color: rgba(13, 13, 13, 0.5);
 }
@@ -23,6 +28,11 @@ html:has(#popup-con[open]) {
 	margin: auto;
 	max-width: 45rem;
 	padding: 20px 35px;
+	position: relative
+}
+
+#popup * {
+	font-size: 1.6rem;
 }
 
 #popup p {
@@ -51,7 +61,7 @@ html:has(#popup-con[open]) {
 	padding: 10px 15px;
 	font-family: 'Atkinson Hyperlegible';
 	font-size: 1.5rem;
-	background-color: var(--color-tcl-blue);
+	background-color: var(--color-tcl-green);
 	color: #fff;
 	transition: 0.3;
 }
@@ -84,6 +94,9 @@ html:has(#popup-con[open]) {
 }
 
 #popup .tcl {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	margin: 20px -35px -20px -35px;
 	padding: 20px 35px 20px 35px;
 	background-color: var(--color-tcl-black);
@@ -95,6 +108,7 @@ html:has(#popup-con[open]) {
 }
 
 #popup .tcl a {
+	align-self: center;
 	display: block;
 	margin-bottom: 18px;
 	text-align: center;

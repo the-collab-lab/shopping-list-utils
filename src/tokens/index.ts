@@ -7,7 +7,6 @@ import words from "./words.json";
  * @see: https://www.rempe.us/diceware/
  */
 const getRandomIntInRange = (min: number, max: number) => {
-  const crypto = window.crypto;
   const rand = new Uint32Array(1);
   const skip = 0x7fffffff - (0x7fffffff % max);
   let result: number;

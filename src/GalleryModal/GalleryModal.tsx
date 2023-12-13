@@ -56,12 +56,7 @@ export function GalleryModal() {
             The Collab Lab provides collaborative, remote project practice for
             early career developers.
           </p>
-          <a
-            href="https://the-collab-lab.codes"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="link text - new window"
-          >
+          <a href="https://the-collab-lab.codes">
             the-collab-lab.codes
           </a>
         </div>

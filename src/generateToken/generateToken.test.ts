@@ -1,4 +1,4 @@
-import { generateToken } from "./index";
+import { generateToken } from "./generateToken";
 
 describe("`generateToken()`", () => {
   it("should return a 3-word token", () => {

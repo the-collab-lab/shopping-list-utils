@@ -1,13 +1,8 @@
 import { useEffect, useRef } from "react";
-import type { Dispatch, SetStateAction } from "react";
 
 import "./Popup.css";
 
-export function Popup({
-  setShowPopup,
-}: {
-  setShowPopup: Dispatch<SetStateAction<boolean>>;
-}) {
+export function Popup() {
   const popupRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -31,7 +26,7 @@ export function Popup({
         <button
           id="close"
           aria-label="Close"
-          onClick={() => setShowPopup(false)}
+          onClick={() => popupRef.current?.close()}
         >
           X
         </button>

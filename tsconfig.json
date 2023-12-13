@@ -20,5 +20,6 @@
     "types": ["node", "vite/client", "vitest/globals"],
     "useDefineForClassFields": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
 }

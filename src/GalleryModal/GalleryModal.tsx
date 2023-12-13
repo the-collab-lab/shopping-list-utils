@@ -1,32 +1,32 @@
 import { useEffect, useRef } from "react";
 
-import "./Popup.css";
+import "./GalleryModal.css";
 
-export function Popup() {
-  const popupRef = useRef<HTMLDialogElement>(null);
+export function GalleryModal() {
+  const galleryModalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    const popup = popupRef.current;
-    if (popup) {
-      popup.showModal();
+    const galleryModalEl = galleryModalRef.current;
+    if (galleryModalEl) {
+      galleryModalEl.showModal();
     }
     return () => {
-      if (popup) {
-        popup.close();
+      if (galleryModalEl) {
+        galleryModalEl.close();
       }
     };
   }, []);
   return (
-    <dialog id="popup-con" ref={popupRef}>
-      <div id="popup">
-        <link
+    <dialog className="GalleryModal" ref={galleryModalRef}>
+      <link
           href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
           rel="stylesheet"
         ></link>
+      <div className="GalleryModal-content">
         <button
           id="close"
           aria-label="Close"
-          onClick={() => popupRef.current?.close()}
+          onClick={() => galleryModalRef.current?.close()}
         >
           X
         </button>

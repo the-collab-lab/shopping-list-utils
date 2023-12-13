@@ -1,17 +1,17 @@
-html:has(#popup-con[open]) {
+html:has(.GalleryModal[open]) {
 	font-size: 62.5% !important;
 }
 
-#popup-con {
+.GalleryModal {
 	border: none;
 	padding: 0;
 }
 
-#popup-con::backdrop {
+.GalleryModal::backdrop {
 	background-color: rgba(13, 13, 13, 0.5);
 }
 
-#popup {
+.GalleryModal-content {
 	--color-tcl-black: #0d0d0d;
 	--color-tcl-blue: #0c6cff;
 	--color-tcl-green: #26ad60;
@@ -31,30 +31,30 @@ html:has(#popup-con[open]) {
 	position: relative
 }
 
-#popup * {
+.GalleryModal-content * {
 	font-size: 1.6rem;
 }
 
-#popup p {
+.GalleryModal-content p {
 	margin: 18px 0 18px 0;
 }
 
-#popup .token {
+.GalleryModal-content .token {
 	padding: 20px;
 	text-align: center;
 	background-color: var(--color-tcl-pink);
 }
 
-#popup .token p {
+.GalleryModal-content .token p {
 	margin-top: 0;
 }
 
-#popup #threeWordToken p {
+.GalleryModal-content #threeWordToken p {
 	font-weight: 700;
 	font-size: 2.8rem;
 }
 
-#popup button {
+.GalleryModal-content button {
 	font-weight: 700;
 	border: none;
 	border-radius: 0;
@@ -66,34 +66,34 @@ html:has(#popup-con[open]) {
 	transition: 0.3;
 }
 
-#popup button#close {
+.GalleryModal-content button#close {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
-#popup button#copy {
+.GalleryModal-content button#copy {
 	background-color: var(--color-tcl-green);
 }
 
-#popup button:hover,
-#popup button:focus,
-#popup button#copy:hover,
-#popup button#copy:focus {
+.GalleryModal-content button:hover,
+.GalleryModal-content button:focus,
+.GalleryModal-content button#copy:hover,
+.GalleryModal-content button#copy:focus {
 	background-color: var(--color-tcl-black);
 	cursor: pointer;
 }
 
-#popup p.not-supported {
+.GalleryModal-content p.not-supported {
 	margin-bottom: 5px;
 }
 
-#popup ul li {
+.GalleryModal-content ul li {
 	list-style-type: square;
 	list-style-position: inside;
 }
 
-#popup .tcl {
+.GalleryModal-content .tcl {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -103,11 +103,11 @@ html:has(#popup-con[open]) {
 	color: #fff;
 }
 
-#popup .tcl p {
+.GalleryModal-content .tcl p {
 	font-size: 1.5rem;
 }
 
-#popup .tcl a {
+.GalleryModal-content .tcl a {
 	align-self: center;
 	display: block;
 	margin-bottom: 18px;

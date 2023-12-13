@@ -1,28 +1,28 @@
 import { useEffect, useRef } from "react";
 
-import "./GalleryModal.css";
+import "./ArchivalNoticeModal.css";
 
-export function GalleryModal() {
-  const galleryModalRef = useRef<HTMLDialogElement>(null);
+export function ArchivalNoticeModal() {
+  const archivalNoticeModalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    const galleryModalEl = galleryModalRef.current;
-    if (galleryModalEl) {
-      galleryModalEl.showModal();
+    const archivalNoticeModalEl = archivalNoticeModalRef.current;
+    if (archivalNoticeModalEl) {
+      archivalNoticeModalEl.showModal();
     }
     return () => {
-      if (galleryModalEl) {
-        galleryModalEl.close();
+      if (archivalNoticeModalEl) {
+        archivalNoticeModalEl.close();
       }
     };
   }, []);
   return (
-    <dialog className="GalleryModal" ref={galleryModalRef}>
-      <div className="GalleryModal-content">
+    <dialog className="ArchivalNoticeModal" ref={archivalNoticeModalRef}>
+      <div className="ArchivalNoticeModal-content">
         <button
           id="close"
           aria-label="Close"
-          onClick={() => galleryModalRef.current?.close()}
+          onClick={() => archivalNoticeModalRef.current?.close()}
         >
           X
         </button>

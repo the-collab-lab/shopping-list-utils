@@ -14,20 +14,20 @@
 }
 
 
-html:has(.GalleryModal[open]) {
+html:has(.ArchivalNoticeModal[open]) {
 	font-size: 62.5% !important;
 }
 
-.GalleryModal {
+.ArchivalNoticeModal {
 	border: none;
 	padding: 0;
 }
 
-.GalleryModal::backdrop {
+.ArchivalNoticeModal::backdrop {
 	background-color: rgba(13, 13, 13, 0.5);
 }
 
-.GalleryModal-content {
+.ArchivalNoticeModal-content {
 	--color-tcl-black: #0d0d0d;
 	--color-tcl-blue: #0c6cff;
 	--color-tcl-green: #26ad60;
@@ -47,30 +47,30 @@ html:has(.GalleryModal[open]) {
 	position: relative
 }
 
-.GalleryModal-content * {
+.ArchivalNoticeModal-content * {
 	font-size: 1.6rem;
 }
 
-.GalleryModal-content p {
+.ArchivalNoticeModal-content p {
 	margin: 18px 0 18px 0;
 }
 
-.GalleryModal-content .token {
+.ArchivalNoticeModal-content .token {
 	padding: 20px;
 	text-align: center;
 	background-color: var(--color-tcl-pink);
 }
 
-.GalleryModal-content .token p {
+.ArchivalNoticeModal-content .token p {
 	margin-top: 0;
 }
 
-.GalleryModal-content #threeWordToken p {
+.ArchivalNoticeModal-content #threeWordToken p {
 	font-weight: 700;
 	font-size: 2.8rem;
 }
 
-.GalleryModal-content button {
+.ArchivalNoticeModal-content button {
 	font-weight: 700;
 	border: none;
 	border-radius: 0;
@@ -82,34 +82,34 @@ html:has(.GalleryModal[open]) {
 	transition: 0.3;
 }
 
-.GalleryModal-content button#close {
+.ArchivalNoticeModal-content button#close {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
-.GalleryModal-content button#copy {
+.ArchivalNoticeModal-content button#copy {
 	background-color: var(--color-tcl-green);
 }
 
-.GalleryModal-content button:hover,
-.GalleryModal-content button:focus,
-.GalleryModal-content button#copy:hover,
-.GalleryModal-content button#copy:focus {
+.ArchivalNoticeModal-content button:hover,
+.ArchivalNoticeModal-content button:focus,
+.ArchivalNoticeModal-content button#copy:hover,
+.ArchivalNoticeModal-content button#copy:focus {
 	background-color: var(--color-tcl-black);
 	cursor: pointer;
 }
 
-.GalleryModal-content p.not-supported {
+.ArchivalNoticeModal-content p.not-supported {
 	margin-bottom: 5px;
 }
 
-.GalleryModal-content ul li {
+.ArchivalNoticeModal-content ul li {
 	list-style-type: square;
 	list-style-position: inside;
 }
 
-.GalleryModal-content .tcl {
+.ArchivalNoticeModal-content .tcl {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -119,11 +119,11 @@ html:has(.GalleryModal[open]) {
 	color: #fff;
 }
 
-.GalleryModal-content .tcl p {
+.ArchivalNoticeModal-content .tcl p {
 	font-size: 1.5rem;
 }
 
-.GalleryModal-content .tcl a {
+.ArchivalNoticeModal-content .tcl a {
 	align-self: center;
 	display: block;
 	margin-bottom: 18px;

@@ -1,4 +1,4 @@
-import words from "./words.json";
+import words from "./words.json" assert { type: "json" };
 
 // the below is heavily based on https://andrew.hedges.name/experiments/diceware/
 

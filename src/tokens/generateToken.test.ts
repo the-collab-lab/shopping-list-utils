@@ -1,13 +1,4 @@
-const nodeCrypto = require("crypto");
 import { generateToken } from "./index";
-
-globalThis.crypto = {
-  getRandomValues: function (buffer) {
-    return nodeCrypto.randomFillSync(buffer);
-  },
-  randomUUID: () => "" as `${string}-${string}-${string}-${string}-${string}`,
-  subtle: nodeCrypto.webcrypto.subtle,
-};
 
 describe("`generateToken()`", () => {
   it("should return a 3-word token", () => {

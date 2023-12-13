@@ -1,4 +1,4 @@
-import { calculateEstimate } from "./index";
+import { calculateEstimate } from "./calculateEstimate";
 
 describe("Test the calculateEstimate function", () => {
   it("returns daysSinceLastTransaction if there is less than 2 purchases", () => {

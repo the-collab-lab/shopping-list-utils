@@ -1,32 +1,28 @@
 import { useEffect, useRef } from "react";
 
-import "./Popup.css";
+import "./ArchivalNoticeModal.css";
 
-export function Popup() {
-  const popupRef = useRef<HTMLDialogElement>(null);
+export function ArchivalNoticeModal() {
+  const archivalNoticeModalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    const popup = popupRef.current;
-    if (popup) {
-      popup.showModal();
+    const archivalNoticeModalEl = archivalNoticeModalRef.current;
+    if (archivalNoticeModalEl) {
+      archivalNoticeModalEl.showModal();
     }
     return () => {
-      if (popup) {
-        popup.close();
+      if (archivalNoticeModalEl) {
+        archivalNoticeModalEl.close();
       }
     };
   }, []);
   return (
-    <dialog id="popup-con" ref={popupRef}>
-      <div id="popup">
-        <link
-          href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-          rel="stylesheet"
-        ></link>
+    <dialog className="ArchivalNoticeModal" ref={archivalNoticeModalRef}>
+      <div className="ArchivalNoticeModal-content">
         <button
           id="close"
           aria-label="Close"
-          onClick={() => popupRef.current?.close()}
+          onClick={() => archivalNoticeModalRef.current?.close()}
         >
           X
         </button>
@@ -60,12 +56,7 @@ export function Popup() {
             The Collab Lab provides collaborative, remote project practice for
             early career developers.
           </p>
-          <a
-            href="https://the-collab-lab.codes"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="link text - new window"
-          >
+          <a href="https://the-collab-lab.codes">
             the-collab-lab.codes
           </a>
         </div>

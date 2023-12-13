@@ -1,17 +1,33 @@
-html:has(#popup-con[open]) {
+@font-face {
+	font-display: swap;
+	font-family: 'Atkinson Hyperlegible';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./fonts/Atkinson-Hyperlegible-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Atkinson Hyperlegible';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./fonts/Atkinson-Hyperlegible-Bold.woff2') format('woff2');
+}
+
+
+html:has(.ArchivalNoticeModal[open]) {
 	font-size: 62.5% !important;
 }
 
-#popup-con {
+.ArchivalNoticeModal {
 	border: none;
 	padding: 0;
 }
 
-#popup-con::backdrop {
+.ArchivalNoticeModal::backdrop {
 	background-color: rgba(13, 13, 13, 0.5);
 }
 
-#popup {
+.ArchivalNoticeModal-content {
 	--color-tcl-black: #0d0d0d;
 	--color-tcl-blue: #0c6cff;
 	--color-tcl-green: #26ad60;
@@ -31,30 +47,30 @@ html:has(#popup-con[open]) {
 	position: relative
 }
 
-#popup * {
+.ArchivalNoticeModal-content * {
 	font-size: 1.6rem;
 }
 
-#popup p {
+.ArchivalNoticeModal-content p {
 	margin: 18px 0 18px 0;
 }
 
-#popup .token {
+.ArchivalNoticeModal-content .token {
 	padding: 20px;
 	text-align: center;
 	background-color: var(--color-tcl-pink);
 }
 
-#popup .token p {
+.ArchivalNoticeModal-content .token p {
 	margin-top: 0;
 }
 
-#popup #threeWordToken p {
+.ArchivalNoticeModal-content #threeWordToken p {
 	font-weight: 700;
 	font-size: 2.8rem;
 }
 
-#popup button {
+.ArchivalNoticeModal-content button {
 	font-weight: 700;
 	border: none;
 	border-radius: 0;
@@ -66,34 +82,34 @@ html:has(#popup-con[open]) {
 	transition: 0.3;
 }
 
-#popup button#close {
+.ArchivalNoticeModal-content button#close {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
-#popup button#copy {
+.ArchivalNoticeModal-content button#copy {
 	background-color: var(--color-tcl-green);
 }
 
-#popup button:hover,
-#popup button:focus,
-#popup button#copy:hover,
-#popup button#copy:focus {
+.ArchivalNoticeModal-content button:hover,
+.ArchivalNoticeModal-content button:focus,
+.ArchivalNoticeModal-content button#copy:hover,
+.ArchivalNoticeModal-content button#copy:focus {
 	background-color: var(--color-tcl-black);
 	cursor: pointer;
 }
 
-#popup p.not-supported {
+.ArchivalNoticeModal-content p.not-supported {
 	margin-bottom: 5px;
 }
 
-#popup ul li {
+.ArchivalNoticeModal-content ul li {
 	list-style-type: square;
 	list-style-position: inside;
 }
 
-#popup .tcl {
+.ArchivalNoticeModal-content .tcl {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -103,11 +119,11 @@ html:has(#popup-con[open]) {
 	color: #fff;
 }
 
-#popup .tcl p {
+.ArchivalNoticeModal-content .tcl p {
 	font-size: 1.5rem;
 }
 
-#popup .tcl a {
+.ArchivalNoticeModal-content .tcl a {
 	align-self: center;
 	display: block;
 	margin-bottom: 18px;

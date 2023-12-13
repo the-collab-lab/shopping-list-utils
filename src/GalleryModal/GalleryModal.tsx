@@ -18,10 +18,6 @@ export function GalleryModal() {
   }, []);
   return (
     <dialog className="GalleryModal" ref={galleryModalRef}>
-      <link
-          href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-          rel="stylesheet"
-        ></link>
       <div className="GalleryModal-content">
         <button
           id="close"

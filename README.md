@@ -15,7 +15,7 @@ npm i @the-collab-lab/shopping-list-utils
 and use it in your projects like so:
 
 ```
-import { generateToken, words, calculateEstimate } from '@the-collab-lab/shopping-list-utils
+import { generateToken, words, calculateEstimate, ArchivalNoticeModal } from '@the-collab-lab/shopping-list-utils
 ```
 
 Current features include:
@@ -25,6 +25,7 @@ Function | Description
 `words` | An array of words available for use when generating a token.
 `generateToken` | Creates a random token string that is 3 words long based on a random calculation.
 `calculateEsimate` | This is used to calculate when someone will want to purchase another item based on their purchasing habits.
+`ArchivalNoticeModal` | This modal is added to archived projects to share information about the demo app, including the token needed to access the app and general information on TCL.
 
 ## Contributing to the Repo
 
